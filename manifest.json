@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Siberian Health Progress",
+  "version": "1.1",
+  "minimum_chrome_version": "38",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "http://*/"
+  ],
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}

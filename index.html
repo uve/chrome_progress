@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple test page for progress-bubble element</title>
+
+    <script src="/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="/bower_components/polymer/polymer.html">
+
+    
+
+    <link rel="import" href="progress/progress-bubble.html" />
+
+
+
+    <style type="text/css">
+
+        body {
+            background: #f2f2f2;
+            background-size: cover;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
+ <div horizontal center-justified layout>
+        <progress-bubble id="circle"></progress-bubble>
+ </div>
+
+
+<script type="text/javascript">
+    NodeList.prototype.forEach = Array.prototype.forEach;  // Haxor.
+
+    var circle = document.getElementById("circle");
+
+    var x = 0;
+    window.setInterval(function() {
+        circle.value = x;
+        circle.textContent = x + "%";
+
+        x += 1;
+
+    }, 100);
+</script>
+
+</body>
+</html>
